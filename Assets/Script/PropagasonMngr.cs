@@ -21,11 +21,13 @@ public class PropagasonMngr : MonoBehaviour
     private GameObject _soundRingParent;
     private SoundRingBe[] soundRingArray;
 
-    [Header("Sound Reactive Settings")]
+    [Header("[REAKTOR] DPRCT Sound Reactive Settings")]
     public ReaktorLink reaktor;
     public Trigger soundBurst;
     [Range(0,1f)]
     public float soundVolumeThreshold;
+
+    [Header("[LASP] Sound Reactive Settings")]
 
     // To avoid sending a black wave for infinite time 
     // I save the last lit time stamp. If no wave is send for a second means, we are back to silence.
@@ -76,7 +78,7 @@ public class PropagasonMngr : MonoBehaviour
         }
     }
 
-    // Launch a wave in rings
+    // Launch one wave in rings
     void LaunchWave()
     {
         int sequencer = 0;
@@ -95,5 +97,20 @@ public class PropagasonMngr : MonoBehaviour
             StartCoroutine(soundRing.coLightTo(wave * maxEmissionRingValue, maxEmissionRingValue, sequencer / waveSpeed));
             sequencer++;
         }
+    }
+
+    public void ProcessLowPassEvent()
+    {
+
+    }
+
+    public void ProcessBandPassEvent()
+    {
+
+    }
+
+    public void ProcessHighPassEvent()
+    {
+
     }
 }
