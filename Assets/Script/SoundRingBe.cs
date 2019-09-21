@@ -6,13 +6,13 @@ using UnityEngine;
 public class SoundRingBe : MonoBehaviour
 {
     [Range(0.0f,5.0f)]
-    public float matEmissiveValue;
+    [SerializeField] float matEmissiveValue;
+    [SerializeField] float minEmissionRate;
 
     private Material mat;
     private Color initialEmissiveColor;
     private Vector3 initialScale;
-
-    //public Material Mat { get => mat; set => mat = value; }
+    private ParticleSystem _sparksPS;
 
     void Awake()
     {
@@ -24,6 +24,8 @@ public class SoundRingBe : MonoBehaviour
 
             initialScale = transform.localScale;
         }
+
+        _sparksPS = GetComponentInChildren<ParticleSystem>();
     }
 
     // Update is called once per frame
