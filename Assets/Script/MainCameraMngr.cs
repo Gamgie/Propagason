@@ -37,23 +37,5 @@ public class MainCameraMngr : MonoBehaviour
 
         _brownianMotion.positionAmplitude = Mathf.Lerp(_initialPositionAmplitude, _initialPositionAmplitude + 2.0f*(soundAmplitude * _initialPositionAmplitude), 0.4f);
         _brownianMotion.rotationAmplitude = Mathf.Lerp(_initialRotationAmplitude, _initialRotationAmplitude + 2.0f * (soundAmplitude * _initialRotationAmplitude), 0.4f);
-        //_brownianMotion.rotationAmplitude
-        /*if(soundAmplitude == 0)
-        {
-            //EnableBrownianMotion(false);
-            //ResetTransform();
-        }
-        else
-        {
-            //EnableBrownianMotion(true);
-            _brownianMotion.positionAmplitude = _initialMotionPositionAmplitude;// Mathf.Lerp(0.0f, _initialMotionPositionAmplitude, soundAmplitude);
-            _brownianMotion.rotationAmplitude = _initialMotionRotationAmplitude;// Mathf.Lerp(0.0f, _initialMotionRotationAmplitude, soundAmplitude);
-        }*/
-    }
-
-    void EnableBrownianMotion(bool isEnable)
-    {
-        _brownianMotion.enablePositionNoise = isEnable;
-        _brownianMotion.enableRotationNoise = isEnable;
     }
 }

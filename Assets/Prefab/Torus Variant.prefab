@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   matEmissiveValue: 0
+  minEmissionRate: 10
 --- !u!1 &5548493646026697211
 GameObject:
   m_ObjectHideFlags: 0
@@ -129,7 +130,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 3
       scalar: 3
-      minScalar: 2
+      minScalar: 1
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -164,7 +165,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 3
       scalar: 0.003
-      minScalar: 0
+      minScalar: 0.001
       maxCurve:
         serializedVersion: 2
         m_Curve:

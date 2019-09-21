@@ -12,7 +12,7 @@ public class SoundRingBe : MonoBehaviour
     private Material mat;
     private Color initialEmissiveColor;
     private Vector3 initialScale;
-    private ParticleSystem _sparksPS;
+    private ParticleSystem.EmissionModule _sparksPSEmission;
 
     void Awake()
     {
@@ -25,7 +25,8 @@ public class SoundRingBe : MonoBehaviour
             initialScale = transform.localScale;
         }
 
-        _sparksPS = GetComponentInChildren<ParticleSystem>();
+        _sparksPSEmission = GetComponentInChildren<ParticleSystem>().emission;
+        _sparksPSEmission.rateOverTime = minEmissionRate;
     }
 
     // Update is called once per frame
@@ -43,11 +44,15 @@ public class SoundRingBe : MonoBehaviour
                                                             transform.localScale.y + matEmissiveValue, 
                                                             transform.localScale.z + matEmissiveValue),
                                                 0.4f);
+            _sparksPSEmission.rateOverTimeMultiplier = matEmissiveValue * 2000;
         }
         else
         {
             transform.localScale = Vector3.Lerp(transform.localScale, initialScale, 0.8f);
+            _sparksPSEmission.rateOverTimeMultiplier = Mathf.Lerp(_sparksPSEmission.rateOverTimeMultiplier, minEmissionRate, 0.8f);
         }
+
+        
     }
 
     public void Blink(float duration, float maxEmissiveValue, float delay = 0)
