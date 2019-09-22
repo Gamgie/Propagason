@@ -22,8 +22,10 @@ public class PropagasonMngr : MonoBehaviour
 
     [Header("[LASP] Sound Reactive Settings")]
     [SerializeField] Lasp.FilterType _filterType;
+    [Range(0.0f, 1.0f)]
+    [SerializeField] float soundThreshold = 0.0f;
 
-    
+
 
     private void Awake()
     {
@@ -42,13 +44,20 @@ public class PropagasonMngr : MonoBehaviour
         float rms = Lasp.MasterInput.CalculateRMSDecibel(_filterType);
         rms = Mathf.Clamp01(1 - rms / (-40));
 
+        if (logRMSValue)
+            Debug.Log("RMS : " + rms);
+    
+        // Remap RMS value according to threshold
+        if(soundThreshold != 0)
+        {
+            float normal = Mathf.InverseLerp(soundThreshold, 1.0f, rms);
+            rms = Mathf.Lerp(0.0f, 1.0f, normal);
+        }
+
         LaunchContinuouseWave(rms);
 
         // Send RMS value to camera for camera movement.
         _mainCamera.AnimateCamera(rms);
-
-        if (logRMSValue)
-            Debug.Log("RMS : " + rms);
     }
 
     // Launch one wave in rings
