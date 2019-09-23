@@ -25,11 +25,22 @@ public class PropagasonMngr : MonoBehaviour
     [Range(0.0f, 1.0f)]
     [SerializeField] float soundThreshold = 0.0f;
 
+    [Header("Camera movement")]
+    [SerializeField] KeyCode _launchCameraPanning;
+    [SerializeField] TimelineMngr _timelineMngr;
+
+    [Header("Final Ember")]
+    [SerializeField] ParticleSystem _finalEmbersPS;
+    ParticleSystem.EmissionModule _finalEmbersEmission;
+    [SerializeField] float _finalEmberEmiterMultiplier;
+
 
 
     private void Awake()
     {
         _soundRingArray = _soundRingParent.GetComponentsInChildren<SoundRingBe>();
+        _finalEmbersEmission = _finalEmbersPS.emission;
+        _finalEmbersEmission.rateOverTime = 0.0f;
     }
 
     // Update is called once per frame
@@ -39,6 +50,10 @@ public class PropagasonMngr : MonoBehaviour
         if (Input.GetKeyUp(launchOneWaveKeyCode))
         {
             LaunchWave();
+        }
+        else if(Input.GetKeyUp(_launchCameraPanning))
+        {
+            _timelineMngr.PlayCameraPanning();
         }
 
         float rms = Lasp.MasterInput.CalculateRMSDecibel(_filterType);
@@ -79,5 +94,13 @@ public class PropagasonMngr : MonoBehaviour
             StartCoroutine(soundRing.coLightTo(wave * maxEmissionRingValue, maxEmissionRingValue, sequencer / waveSpeed));
             sequencer++;
         }
+
+        StartCoroutine(coBurstFinalEmbers(sequencer / waveSpeed, wave*maxEmissionRingValue));
+    }
+
+    IEnumerator coBurstFinalEmbers(float delay, float waveValue)
+    {
+        yield return new WaitForSeconds(delay);
+        _finalEmbersEmission.rateOverTime = waveValue * _finalEmberEmiterMultiplier;
     }
 }
