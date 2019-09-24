@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PropagasonMngr : MonoBehaviour
 {
-    public bool logRMSValue;
+    public bool logInputLevel;
 
     [Header("Wave Settings")]
     public KeyCode launchOneWaveKeyCode;
@@ -21,9 +21,13 @@ public class PropagasonMngr : MonoBehaviour
     private SoundRingBe[] _soundRingArray;
 
     [Header("[LASP] Sound Reactive Settings")]
+    [Tooltip("Decide if you use raw RMS or Audio Level Tracker (normalized) value.")]
+    public bool useNormalizedLevel;
     [SerializeField] Lasp.FilterType _filterType;
-    [Range(0.0f, 1.0f)]
-    [SerializeField] float soundThreshold = 0.0f;
+    [Tooltip("In case, you wanna filter sound input to avoid external noise for example. Use threshold.")]
+    [SerializeField, Range(0.0f, 1.0f)] float soundThreshold = 0.0f;
+    
+    public float normalizedLevel { get; set; }
 
     [Header("Camera movement")]
     [SerializeField] KeyCode _launchCameraPanning;
@@ -41,6 +45,8 @@ public class PropagasonMngr : MonoBehaviour
         _soundRingArray = _soundRingParent.GetComponentsInChildren<SoundRingBe>();
         _finalEmbersEmission = _finalEmbersPS.emission;
         _finalEmbersEmission.rateOverTime = 0.0f;
+
+        GetComponent<Lasp.AudioLevelTracker>().filterType = _filterType;
     }
 
     // Update is called once per frame
@@ -56,23 +62,35 @@ public class PropagasonMngr : MonoBehaviour
             _timelineMngr.PlayCameraPanning();
         }
 
-        float rms = Lasp.MasterInput.CalculateRMSDecibel(_filterType);
-        rms = Mathf.Clamp01(1 - rms / (-40));
+        float inputLevel = 0.0f;
+        if(!useNormalizedLevel)
+        {
+            // We use raw RMS decibel value
+            inputLevel = Lasp.MasterInput.CalculateRMSDecibel(_filterType);
+            inputLevel = Mathf.Clamp01(1 - inputLevel / (-40)); // clamp it considering -40Db is silence level.
 
-        if (logRMSValue)
-            Debug.Log("RMS : " + rms);
+            if (logInputLevel)
+                Debug.Log("RMS : " + logInputLevel);
+        }
+        else
+        {
+            inputLevel = normalizedLevel;
+
+            if (logInputLevel)
+                Debug.Log("Normalized level : " + normalizedLevel);
+        }
     
         // Remap RMS value according to threshold
         if(soundThreshold != 0)
         {
-            float normal = Mathf.InverseLerp(soundThreshold, 1.0f, rms);
-            rms = Mathf.Lerp(0.0f, 1.0f, normal);
+            float normal = Mathf.InverseLerp(soundThreshold, 1.0f, inputLevel);
+            inputLevel = Mathf.Lerp(0.0f, 1.0f, normal);
         }
 
-        LaunchContinuouseWave(rms);
+        LaunchContinuouseWave(inputLevel);
 
         // Send RMS value to camera for camera movement.
-        _mainCamera.AnimateCamera(rms);
+        _mainCamera.AnimateCamera(inputLevel);
     }
 
     // Launch one wave in rings

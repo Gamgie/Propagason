@@ -91,7 +91,7 @@ namespace Lasp
         #region Private members
 
         // Silence: Minimum amplitude value
-        const float kSilence = -60;
+        const float kSilence = -30;
 
         // Current amplitude value.
         float _amplitude = kSilence;

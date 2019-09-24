@@ -116,7 +116,7 @@ namespace Lasp
             // Label: -60dB
             Handles.Label(
                 new Vector2(rect.xMin + 1, rect.yMax - 10),
-                "-60dB", EditorStyles.miniLabel
+                "-30dB", EditorStyles.miniLabel
             );
 
             // Label: 0dB
