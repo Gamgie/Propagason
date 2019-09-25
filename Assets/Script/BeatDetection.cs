@@ -1,6 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+
+[System.Serializable]
+public class BeatEvent : UnityEngine.Events.UnityEvent<float> { }
 
 public class BeatDetection : MonoBehaviour
 {
@@ -15,6 +19,8 @@ public class BeatDetection : MonoBehaviour
 
     [Tooltip("Minimum time between 2 beats detection")]
     [SerializeField] float beatDetectionSleepTime;
+
+    public BeatEvent _beatEvent = new BeatEvent();
 
 
     public float normalizedLevel { get; set; }  // normalized level received from audio Level Tracker component
@@ -81,6 +87,7 @@ public class BeatDetection : MonoBehaviour
                         if(debug)
                             Debug.Log("Beat Detected at " + Time.fixedTime);
                         graphDebug.OnBeatDetected();
+                        _beatEvent.Invoke(Time.fixedTime);
                         beatTimeStamp = Time.fixedTime;
                     }
                 }

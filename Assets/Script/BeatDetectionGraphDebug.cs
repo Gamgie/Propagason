@@ -72,6 +72,9 @@ public class BeatDetectionGraphDebug : MonoBehaviour
 
     public void UpdateGraph(float avgValue, float normalizedLevel)
     {
+        if (!gameObject.activeSelf)
+            return;
+
         if(drawAVGGraph)
         {
             _avgHistory[_avgIndex] = avgValue;
