@@ -24,5 +24,42 @@ public class AudioMngr : MonoBehaviour
     [SerializeField] private float _volume;
 
     public float volumeThreshold = 0.1f;
+    int[] pitchHistory;
+    int pitchHistoryIndex;
+    int pitchHistorySamples = 64;
+    float pitchAverage = 0.0f;
 
+    private void Awake()
+    {
+        pitchHistory = new int[pitchHistorySamples];
+        pitchHistoryIndex = 0;
+    }
+
+    private void Update()
+    {
+        if (Volume < volumeThreshold) Volume = 0;
+
+        // Add pitch value to history
+        pitchHistory[pitchHistoryIndex%pitchHistorySamples] = Pitch;
+        pitchHistoryIndex++;
+        pitchHistoryIndex = pitchHistoryIndex%pitchHistorySamples;
+
+        int sum = 0;
+        foreach(int i in pitchHistory)
+        {
+            sum += i;
+        }
+        pitchAverage = sum / pitchHistorySamples;
+    }
+
+
+    public float GetPitchAverage()
+    {
+        return pitchAverage;
+    }
+
+    public NoteType GetNoteAverage()
+    {
+        return (NoteType)(pitchAverage % 12);
+    }
 }

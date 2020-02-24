@@ -14,12 +14,11 @@ public class PropagasonMngr : MonoBehaviour
     public float maxEmissionRingValue;
 
     [Header("External Links")]
-    [SerializeField]  private GameObject _soundRingParent;
+    [SerializeField] private GameObject _soundRingParent;
     [SerializeField] private MainCameraMngr _mainCamera;
+    [SerializeField] private AudioMngr _audioMngr;
     private SoundRingBe[] _soundRingArray;
 
-    
-    public float normalizedLevel { get; set; }
 
     [Header("Camera movement")]
     [SerializeField] KeyCode _launchCameraPanning;
@@ -29,6 +28,10 @@ public class PropagasonMngr : MonoBehaviour
     [SerializeField] ParticleSystem _finalEmbersPS;
     ParticleSystem.EmissionModule _finalEmbersEmission;
     [SerializeField] float _finalEmberEmiterMultiplier;
+
+    [Header("Color Range")]
+    public Color[] colors;
+    public Color result;
 
     private void Awake()
     {
@@ -46,33 +49,35 @@ public class PropagasonMngr : MonoBehaviour
             _timelineMngr.PlayCameraPanning();
         }
 
-        float inputLevel = normalizedLevel;
-
-        if (logInputLevel)
-            Debug.Log("Normalized level : " + normalizedLevel);
-    
-        LaunchContinuouseWave(inputLevel);
+        LaunchContinuouseWave(_audioMngr.Volume, ComputeNoteColor());
+        Debug.Log(_audioMngr.Note);
 
         // Send RMS value to camera for camera movement.
-        _mainCamera.AnimateCamera(inputLevel);
+        //_mainCamera.AnimateCamera(inputLevel);
     }
 
 
-    void LaunchContinuouseWave(float wave)
+    public void LaunchContinuouseWave(float waveEnergy, Color waveColor)
     {
         int sequencer = 0;
         foreach (SoundRingBe soundRing in _soundRingArray)
         {
-            StartCoroutine(soundRing.coLightTo(wave * maxEmissionRingValue, maxEmissionRingValue, sequencer / waveSpeed));
+            StartCoroutine(soundRing.coReceiveEnergy(waveEnergy * maxEmissionRingValue, maxEmissionRingValue, sequencer / waveSpeed));
+            soundRing.UpdateColor(waveColor, sequencer / waveSpeed);
             sequencer++;
         }
 
-        StartCoroutine(coBurstFinalEmbers(sequencer / waveSpeed, wave*maxEmissionRingValue));
+        StartCoroutine(coBurstFinalEmbers(sequencer / waveSpeed, waveEnergy * maxEmissionRingValue));
     }
 
     IEnumerator coBurstFinalEmbers(float delay, float waveValue)
     {
         yield return new WaitForSeconds(delay);
         _finalEmbersEmission.rateOverTime = waveValue * _finalEmberEmiterMultiplier;
+    }
+
+    Color ComputeNoteColor()
+    {
+        return colors[(int)_audioMngr.Note];
     }
 }

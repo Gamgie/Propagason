@@ -8011,7 +8011,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 550951190}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 8fa7e60f759ccfb4f85e005a8f39c41d, type: 3}
@@ -12578,7 +12578,6 @@ GameObject:
   - component: {fileID: 1071874449}
   - component: {fileID: 1071874450}
   - component: {fileID: 1071874451}
-  - component: {fileID: 1071874452}
   m_Layer: 0
   m_Name: OSCManager
   m_TagString: Untagged
@@ -12767,88 +12766,6 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 550951193}
         m_MethodName: set_Pitch
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: OscJack.OscEventReceiver+IntEvent, jp.keijiro.osc-jack.Runtime, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  _floatEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 550951193}
-        m_MethodName: set_Frequency
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: OscJack.OscEventReceiver+FloatEvent, jp.keijiro.osc-jack.Runtime,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-  _vector2Event:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: OscJack.OscEventReceiver+Vector2Event, jp.keijiro.osc-jack.Runtime,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-  _vector3Event:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: OscJack.OscEventReceiver+Vector3Event, jp.keijiro.osc-jack.Runtime,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-  _vector4Event:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: OscJack.OscEventReceiver+Vector4Event, jp.keijiro.osc-jack.Runtime,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-  _vector2IntEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: OscJack.OscEventReceiver+Vector2IntEvent, jp.keijiro.osc-jack.Runtime,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-  _vector3IntEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: OscJack.OscEventReceiver+Vector3IntEvent, jp.keijiro.osc-jack.Runtime,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-  _stringEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: OscJack.OscEventReceiver+StringEvent, jp.keijiro.osc-jack.Runtime,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
---- !u!114 &1071874452
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1071874447}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51f8f979447c54247bcba0d5441e6081, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _udpPort: 9000
-  _oscAddress: /note
-  _dataType: 1
-  _event:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  _intEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 550951193}
-        m_MethodName: GetNote
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -18062,10 +17979,25 @@ MonoBehaviour:
   maxEmissionRingValue: 2.15
   _soundRingParent: {fileID: 1036965638}
   _mainCamera: {fileID: 1139698841}
+  _audioMngr: {fileID: 550951193}
   _launchCameraPanning: 32
   _timelineMngr: {fileID: 848163281}
   _finalEmbersPS: {fileID: 11635042}
   _finalEmberEmiterMultiplier: 500
+  colors:
+  - {r: 1, g: 0.75744575, b: 0.29019606, a: 1}
+  - {r: 0.9433962, g: 0.7037968, b: 0.24474904, a: 1}
+  - {r: 0.92156863, g: 0.6509804, b: 0.3254902, a: 1}
+  - {r: 0.9056604, g: 0.5592108, b: 0.4229263, a: 1}
+  - {r: 1, g: 0.5176471, b: 0.5019608, a: 1}
+  - {r: 0.9098039, g: 0.4078432, b: 0.5038651, a: 1}
+  - {r: 1, g: 0.33490568, b: 0.39219764, a: 1}
+  - {r: 0.5950799, g: 0.43734425, b: 0.7924528, a: 1}
+  - {r: 0.5983533, g: 0.45098042, b: 1, a: 1}
+  - {r: 0.4677596, g: 0.3517711, b: 0.8773585, a: 1}
+  - {r: 0.45098042, g: 0.4872581, b: 1, a: 1}
+  - {r: 0.4509804, g: 0.62352943, b: 1, a: 1}
+  result: {r: 1, g: 0, b: 0.47424698, a: 1}
 --- !u!114 &1957013965
 MonoBehaviour:
   m_ObjectHideFlags: 0
