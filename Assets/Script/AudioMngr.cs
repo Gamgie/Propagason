@@ -16,7 +16,13 @@ public class AudioMngr : MonoBehaviour
     }
     public float Frequency { get => _frequency; set => _frequency = value; }
     public NoteType Note { get => _note; set => _note = value; }
-    public float Volume { get => _volume; set => _volume = value; }
+    public float Volume {
+        get
+        {
+            if (_volume < volumeThreshold) _volume = 0;
+            return _volume;
+        }
+        set => _volume = value; }
 
     [SerializeField] private int _pitch;
     [SerializeField] private float _frequency;
@@ -37,8 +43,6 @@ public class AudioMngr : MonoBehaviour
 
     private void Update()
     {
-        if (Volume < volumeThreshold) Volume = 0;
-
         // Add pitch value to history
         pitchHistory[pitchHistoryIndex%pitchHistorySamples] = Pitch;
         pitchHistoryIndex++;

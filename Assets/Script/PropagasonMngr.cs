@@ -27,6 +27,7 @@ public class PropagasonMngr : MonoBehaviour
     [Header("Final Ember")]
     [SerializeField] ParticleSystem _finalEmbersPS;
     ParticleSystem.EmissionModule _finalEmbersEmission;
+    ParticleSystem.MainModule _finalEmbersMainModule;
     [SerializeField] float _finalEmberEmiterMultiplier;
 
     [Header("Color Range")]
@@ -38,6 +39,7 @@ public class PropagasonMngr : MonoBehaviour
         _soundRingArray = _soundRingParent.GetComponentsInChildren<SoundRingBe>();
         _finalEmbersEmission = _finalEmbersPS.emission;
         _finalEmbersEmission.rateOverTime = 0.0f;
+        _finalEmbersMainModule = _finalEmbersPS.main;
     }
 
     // Update is called once per frame
@@ -50,7 +52,6 @@ public class PropagasonMngr : MonoBehaviour
         }
 
         LaunchContinuouseWave(_audioMngr.Volume, ComputeNoteColor());
-        Debug.Log(_audioMngr.Note);
 
         // Send RMS value to camera for camera movement.
         //_mainCamera.AnimateCamera(inputLevel);
@@ -67,13 +68,14 @@ public class PropagasonMngr : MonoBehaviour
             sequencer++;
         }
 
-        StartCoroutine(coBurstFinalEmbers(sequencer / waveSpeed, waveEnergy * maxEmissionRingValue));
+        StartCoroutine(coBurstFinalEmbers(sequencer / waveSpeed, waveEnergy * maxEmissionRingValue, waveColor));
     }
 
-    IEnumerator coBurstFinalEmbers(float delay, float waveValue)
+    IEnumerator coBurstFinalEmbers(float delay, float waveValue, Color waveColor)
     {
         yield return new WaitForSeconds(delay);
         _finalEmbersEmission.rateOverTime = waveValue * _finalEmberEmiterMultiplier;
+        _finalEmbersMainModule.startColor = waveColor;
     }
 
     Color ComputeNoteColor()
