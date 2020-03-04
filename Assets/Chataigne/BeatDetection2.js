@@ -11,7 +11,7 @@ var beatThresholdSensibility = script.addFloatParameter("Beat Threshold Sensibil
 var sample = script.addIntParameter("Samples","Number of samples used for beat detection",1024,0,8192);
 var analyzerValue = script.addTargetParameter("Analyzer value","Analyzer value from sound card"); 
 var beatCountTrigger = script.addIntParameter("Beat Count Trigger","How many beat we need to launch anim",4,1,10);
-var beatCountTriggerDuration = script.addFloatParameter("Beat Count Trigger Duration","Whats duration for beat counting",4,1,10);
+var beatCountTriggerDuration = script.addFloatParameter("Beat Count Trigger Duration","Duration in seconds to reset beat count after last beat detected",4,1,10);
 var beatCountIdleTime = script.addFloatParameter("Idle time","Idle time between 2 beat detection",0.3,0,1);
 
 
