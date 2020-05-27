@@ -11,8 +11,8 @@ var beatThresholdSensibility = script.addFloatParameter("Beat Threshold Sensibil
 var sample = script.addIntParameter("Samples","Number of samples used for beat detection",1024,0,8192);
 var analyzerValue = script.addTargetParameter("Analyzer value","Analyzer value from sound card"); 
 var beatCountTrigger = script.addIntParameter("Beat Count Trigger","How many beat we need to launch anim",4,1,10);
-var beatCountTriggerDuration = script.addFloatParameter("Beat Count Trigger Duration","Duration in seconds to reset beat count after last beat detected",4,1,10);
-var beatCountIdleTime = script.addFloatParameter("Idle time","Idle time between 2 beat detection",0.3,0,1);
+var beatCountTriggerDuration = script.addFloatParameter("Beat Count Trigger Duration","Duration in seconds to reset beat count after last beat detected",1,0,2);
+var beatCountIdleTime = script.addFloatParameter("Idle time","Idle time with no detection allowed between 2 beat detection. Avoid counting one pic multiple time.",0.3,0,1);
 
 
 //Here are all the type of parameters you can create
@@ -137,17 +137,13 @@ function ComputeAverageEnergy()
 	}
 	else
 	{
-		script.logError("Can't divide by zero");
+		script.logError("Number of sample is 0, we can't compute beat detection on 0 sample.");
 	}
 }
 
 function BeatDetection()
 {
-	var peak = beatThresholdSensibility.get() * actualAverageEnergy; 
-
-	/*script.log("actualAverageEnergy : "+ actualAverageEnergy);
-	script.log("actualEnergy : "+ actualEnergy);
-	script.log("-------------------------------------------");*/
+	/*var peak = beatThresholdSensibility.get() * actualAverageEnergy; 
 
 	if(peak < actualEnergy && util.getTime()-beatTimeStamp > beatCountIdleTime.get())
 	{
@@ -171,6 +167,9 @@ function BeatDetection()
 		beatCount = 0;
 		local.setValid(false);
 	}
-
-	
+*/
+	//script.log("actualAverageEnergy : "+ peak);
+	/*script.log("actualEnergy : "+ actualEnergy);
+	script.log("beatCount : "+ beatCount);
+	script.log("-------------------------------------------");*/
 }
