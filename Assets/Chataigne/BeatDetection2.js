@@ -143,7 +143,7 @@ function ComputeAverageEnergy()
 
 function BeatDetection()
 {
-	/*var peak = beatThresholdSensibility.get() * actualAverageEnergy; 
+	var peak = beatThresholdSensibility.get() * actualAverageEnergy; 
 
 	if(peak < actualEnergy && util.getTime()-beatTimeStamp > beatCountIdleTime.get())
 	{
@@ -167,7 +167,7 @@ function BeatDetection()
 		beatCount = 0;
 		local.setValid(false);
 	}
-*/
+
 	//script.log("actualAverageEnergy : "+ peak);
 	/*script.log("actualEnergy : "+ actualEnergy);
 	script.log("beatCount : "+ beatCount);
