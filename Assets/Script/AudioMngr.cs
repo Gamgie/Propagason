@@ -10,7 +10,7 @@ public class AudioMngr : MonoBehaviour
     public int Pitch { get => _pitch;
         set
         {
-            _pitch = value;
+            _pitch = (int) Mathf.Lerp(_pitch, value, 0.1f);
             Note = (NoteType)(_pitch%12);
         }
     }
@@ -19,14 +19,14 @@ public class AudioMngr : MonoBehaviour
     public float Volume {
         get
         {
-            if (_volume < volumeThreshold) _volume = 0;
-            return _volume;
+            return Remap(_volume,volumeThreshold,1,0,1);
         }
         set => _volume = value; }
 
     [SerializeField] private int _pitch;
     [SerializeField] private float _frequency;
     [SerializeField] private NoteType _note;
+    [Range(0.0f, 1.0f)]
     [SerializeField] private float _volume;
 
     public float volumeThreshold = 0.1f;
@@ -66,4 +66,12 @@ public class AudioMngr : MonoBehaviour
     {
         return (NoteType)(pitchAverage % 12);
     }
+
+    public float Remap(float value, float from1, float to1, float from2, float to2)
+    {
+
+        return (value - from1) / (to1 - from1) * (to2 - from2) + from2;
+
+    }
+
 }

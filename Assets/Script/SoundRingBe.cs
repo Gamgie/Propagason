@@ -6,9 +6,9 @@ using UnityEngine;
 public class SoundRingBe : MonoBehaviour
 {
     [Range(0.0f,5.0f)]
-    [SerializeField] float matEmissiveValue;
-    [SerializeField] float minEmissionRate;
-    [SerializeField] int rateOverTimeMultiplier = 2000;
+    [SerializeField] float _matEmissiveValue;
+    [SerializeField] float _minEmissionRate;
+    [SerializeField] int _rateOverTimeMultiplier = 2000;
 
     private Material mat;
     private Color initialEmissiveColor;
@@ -25,15 +25,15 @@ public class SoundRingBe : MonoBehaviour
         mat = GetComponent<Renderer>().material;
         if(mat!=null)
         {
-            initialEmissiveColor = mat.GetColor("_EmissionColor");
-            mat.SetColor("_EmissionColor", initialEmissiveColor * matEmissiveValue);
+            initialEmissiveColor = mat.GetColor("_Color");
+            mat.SetColor("_Color", initialEmissiveColor * _matEmissiveValue);
             actualColor = initialEmissiveColor;
 
             initialScale = transform.localScale;
         }
 
         _sparksPSEmission = GetComponentInChildren<ParticleSystem>().emission;
-        _sparksPSEmission.rateOverTime = minEmissionRate;
+        _sparksPSEmission.rateOverTime = _minEmissionRate;
         _sparksPSMain = GetComponentInChildren<ParticleSystem>().main;
 
     }
@@ -41,51 +41,56 @@ public class SoundRingBe : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Update ring emissive color
-        if(mat!=null && mat.GetColor("_EmissionColor") != actualColor * matEmissiveValue)
-        {
-            mat.SetColor("_EmissionColor", actualColor * matEmissiveValue);
-        }
-
-        if(matEmissiveValue != 0)
+        if (_matEmissiveValue != 0)
         {
             transform.localScale = Vector3.Lerp(transform.localScale, 
-                                                new Vector3(transform.localScale.x + matEmissiveValue, 
-                                                            transform.localScale.y + matEmissiveValue, 
-                                                            transform.localScale.z + matEmissiveValue),
-                                                0.4f);
-            _sparksPSEmission.rateOverTimeMultiplier = matEmissiveValue * rateOverTimeMultiplier;
+                                                initialScale * (1+_matEmissiveValue/2),
+                                                0.2f);
+            _sparksPSEmission.rateOverTimeMultiplier = _matEmissiveValue * _rateOverTimeMultiplier;
         }
         else
         {
             transform.localScale = Vector3.Lerp(transform.localScale, initialScale, 0.8f);
-            _sparksPSEmission.rateOverTimeMultiplier = Mathf.Lerp(_sparksPSEmission.rateOverTimeMultiplier, minEmissionRate, 0.8f);
+            _sparksPSEmission.rateOverTimeMultiplier = Mathf.Lerp(_sparksPSEmission.rateOverTimeMultiplier, _minEmissionRate, 0.8f);
         }
 
     }
 
-    public IEnumerator coReceiveEnergy(float value, float maxEmissiveValue, float delay = 0)
+    IEnumerator coReceiveEnergy(float value, float maxEmissiveValue, float delay = 0)
     {
         yield return new WaitForSeconds(delay);
 
-        Mathf.Clamp(value, 0.0f, maxEmissiveValue);
-        matEmissiveValue = value;
+        
     }
 
-    public void UpdateColor(Color c, float delay = 0)
-    {
-        StartCoroutine(coChangeColor(c, delay));
-    }
-
-    IEnumerator coChangeColor(Color c, float delay = 0)
+    /// <summary>
+    /// Update ring color and emission value.
+    /// </summary>
+    /// <param name="c"></param>
+    /// <param name="energy"></param>
+    /// <param name="maxEmission"></param>
+    /// <param name="delay"></param>
+    /// <returns></returns>
+    public IEnumerator coUpdateRing(Color c, float energy, float delay = 0)
     {
         yield return new WaitForSeconds(delay);
 
-        actualColor = c;
-        if (mat != null && mat.GetColor("_EmissionColor") != actualColor * matEmissiveValue)
+        _matEmissiveValue = energy;
+
+        // Compute new color. Adjust color with emission intensity
+        actualColor = c * (Mathf.Pow(2, _matEmissiveValue) - 1);
+        //actualColor = c * _matEmissiveValue;
+
+        if (mat != null)
         {
-            mat.SetColor("_EmissionColor", actualColor * matEmissiveValue);
+            mat.SetColor("_Color", actualColor);
             _sparksPSMain.startColor = new Color(actualColor.r, actualColor.g, actualColor.b);
         }
+    }
+
+    public void SetupRing(float minEmissionRate, int rateOverTimeMultiplier)
+    {
+        _minEmissionRate = minEmissionRate;
+        _rateOverTimeMultiplier = rateOverTimeMultiplier;
     }
 }

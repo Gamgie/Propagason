@@ -777,7 +777,7 @@ ParticleSystem:
     gravityModifier:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 0.0015
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -2855,7 +2855,7 @@ ParticleSystem:
     strength:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.3
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -3012,7 +3012,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     separateAxes: 0
-    frequency: 0.1
+    frequency: 0.2
     damping: 1
     octaves: 1
     octaveMultiplier: 0.5
@@ -3021,7 +3021,7 @@ ParticleSystem:
     scrollSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.1
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -3083,16 +3083,16 @@ ParticleSystem:
           time: 0
           value: -1
           inSlope: 0
-          outSlope: 2
+          outSlope: 0
           tangentMode: 0
           weightedMode: 0
           inWeight: 0.33333334
           outWeight: 0.33333334
         - serializedVersion: 3
           time: 1
-          value: 1
+          value: 0.9662628
           inSlope: 2
-          outSlope: 0
+          outSlope: 2
           tangentMode: 0
           weightedMode: 0
           inWeight: 0.33333334
@@ -3783,7 +3783,7 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 0
+    enabled: 1
     serializedVersion: 3
     type: 0
     collisionMode: 0
@@ -3800,7 +3800,7 @@ ParticleSystem:
     m_Dampen:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 0.1
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -3853,7 +3853,7 @@ ParticleSystem:
     m_Bounce:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 0.1
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -4996,6 +4996,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 63.378708
       objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
 --- !u!4 &15339831 stripped
@@ -5081,6 +5096,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 63.378708
       objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
 --- !u!4 &21989229 stripped
@@ -5165,6 +5195,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 63.378708
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
@@ -5485,6 +5530,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 63.378708
       objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
 --- !u!4 &156070254 stripped
@@ -5657,6 +5717,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 63.378708
       objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
 --- !u!4 &216322384 stripped
@@ -5810,6 +5885,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 63.378708
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
@@ -6229,6 +6319,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 63.378708
       objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
 --- !u!4 &332491123 stripped
@@ -6389,6 +6494,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 63.378708
       objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
 --- !u!4 &337084322 stripped
@@ -6543,6 +6663,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 63.378708
       objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
 --- !u!4 &355876545 stripped
@@ -6627,6 +6762,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 63.378708
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
@@ -6853,6 +7003,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 100.000015
       objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
 --- !u!4 &410242750 stripped
@@ -7007,6 +7172,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 63.378708
       objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
 --- !u!4 &437674512 stripped
@@ -7097,6 +7277,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 63.378708
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
@@ -7252,6 +7447,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 63.378708
       objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
 --- !u!4 &455508038 stripped
@@ -7405,6 +7615,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 63.378708
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
@@ -7714,6 +7939,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 63.378708
       objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
 --- !u!4 &528919137 stripped
@@ -7804,6 +8044,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 100.000015
       objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
 --- !u!4 &534927787 stripped
@@ -7888,6 +8143,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 63.378708
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
@@ -8113,7 +8383,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pitch: -1
-  _frequency: 0
+  _frequency: 2.34
   _note: 0
   _volume: 0
   volumeThreshold: 0.1
@@ -8198,6 +8468,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 99.999985
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
@@ -8358,6 +8643,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 63.378708
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
@@ -8650,6 +8950,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 100.000015
       objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
 --- !u!4 &634467214 stripped
@@ -8734,6 +9049,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 63.378735
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
@@ -8877,6 +9207,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 63.378708
       objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
 --- !u!4 &694191467 stripped
@@ -8962,6 +9307,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 63.378708
       objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
 --- !u!4 &704057345 stripped
@@ -9046,6 +9406,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 63.378708
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
@@ -9217,6 +9592,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 100.000015
       objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
 --- !u!4 &709070640 stripped
@@ -9306,6 +9696,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 99.999985
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
@@ -9460,6 +9865,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 63.378708
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
@@ -9626,6 +10046,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 100.000015
       objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
 --- !u!4 &748742534 stripped
@@ -9780,6 +10215,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 63.378708
       objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
 --- !u!4 &751461590 stripped
@@ -9933,6 +10383,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 100.000015
       objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
 --- !u!4 &770341183 stripped
@@ -10017,6 +10482,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 63.378716
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
@@ -10126,6 +10606,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 100.000015
       objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
 --- !u!4 &783180055 stripped
@@ -10211,6 +10706,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 63.378708
       objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
 --- !u!4 &784970535 stripped
@@ -10295,6 +10805,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 63.378708
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
@@ -10387,6 +10912,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 63.378708
       objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
 --- !u!4 &811610660 stripped
@@ -10472,6 +11012,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 63.378708
       objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
 --- !u!4 &823314530 stripped
@@ -10556,6 +11111,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 63.378708
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
@@ -10711,6 +11281,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 63.378708
       objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
 --- !u!4 &834436513 stripped
@@ -10796,6 +11381,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 63.378708
       objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
 --- !u!4 &837713191 stripped
@@ -10880,6 +11480,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 63.378708
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
@@ -11035,6 +11650,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 63.378708
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
@@ -11256,6 +11886,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 100.000015
       objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
 --- !u!4 &879451692 stripped
@@ -11345,6 +11990,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 100.000015
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
@@ -11518,6 +12178,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 63.378708
       objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
 --- !u!4 &938874127 stripped
@@ -11668,7 +12343,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 1
-  m_FollowOffset: {x: -0.006823778, y: 0.0022058487, z: -9.985698}
+  m_FollowOffset: {x: -2.636824, y: 0.0022058487, z: -11.385716}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -11797,6 +12472,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 100.000015
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
@@ -11969,7 +12659,7 @@ Light:
   serializedVersion: 9
   m_Type: 1
   m_Color: {r: 0.9386792, g: 0.9752228, b: 1, a: 1}
-  m_Intensity: 0.2
+  m_Intensity: 0.1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -12126,6 +12816,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 100.000015
       objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
 --- !u!4 &1035582059 stripped
@@ -12233,7 +12938,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1036965638}
   m_LocalRotation: {x: -0, y: 0.52479357, z: -0, w: 0.8512295}
-  m_LocalPosition: {x: -0.7, y: 1.7, z: -1.5}
+  m_LocalPosition: {x: -0.68, y: 1.7, z: -1.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 216322384}
@@ -12402,6 +13107,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 63.378708
       objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
 --- !u!4 &1040840079 stripped
@@ -12486,6 +13206,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 63.378708
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
@@ -12577,6 +13312,7 @@ GameObject:
   - component: {fileID: 1071874450}
   - component: {fileID: 1071874451}
   - component: {fileID: 1071874452}
+  - component: {fileID: 1071874453}
   m_Layer: 0
   m_Name: OSCManager
   m_TagString: Untagged
@@ -12904,6 +13640,99 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: OscJack.OscEventReceiver+StringEvent, jp.keijiro.osc-jack.Runtime,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &1071874453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1071874447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51f8f979447c54247bcba0d5441e6081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _udpPort: 9000
+  _oscAddress: /maxringemission
+  _dataType: 2
+  _event:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 848163281}
+        m_MethodName: PlayCameraPanning
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  _intEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: OscJack.OscEventReceiver+IntEvent, jp.keijiro.osc-jack.Runtime, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  _floatEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1957013964}
+        m_MethodName: set_MaxEmissionRingValue
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: OscJack.OscEventReceiver+FloatEvent, jp.keijiro.osc-jack.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  _vector2Event:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: OscJack.OscEventReceiver+Vector2Event, jp.keijiro.osc-jack.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  _vector3Event:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: OscJack.OscEventReceiver+Vector3Event, jp.keijiro.osc-jack.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  _vector4Event:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: OscJack.OscEventReceiver+Vector4Event, jp.keijiro.osc-jack.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  _vector2IntEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: OscJack.OscEventReceiver+Vector2IntEvent, jp.keijiro.osc-jack.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  _vector3IntEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: OscJack.OscEventReceiver+Vector3IntEvent, jp.keijiro.osc-jack.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  _stringEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: OscJack.OscEventReceiver+StringEvent, jp.keijiro.osc-jack.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!4 &1073606938 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: ad1f5855a33f0694886cbd301d99cc40,
@@ -12992,6 +13821,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 99.99998
       objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
 --- !u!4 &1111898221 stripped
@@ -13077,6 +13921,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 63.378708
       objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
 --- !u!4 &1119981546 stripped
@@ -13111,14 +13970,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1139698838}
-  m_LocalRotation: {x: 0, y: 0.53442603, z: 0, w: 0.84521526}
-  m_LocalPosition: {x: -1.44, y: 1.71, z: -1.81}
+  m_LocalRotation: {x: -0, y: 0.5286084, z: -0, w: 0.84886587}
+  m_LocalPosition: {x: -4.11, y: 1.71, z: -3.18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 987902461}
   m_Father: {fileID: 1581520373}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 64.61, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 63.823, z: 0}
 --- !u!114 &1139698840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13183,10 +14042,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enablePositionNoise: 1
-  _enableRotationNoise: 1
+  _enableRotationNoise: 0
   _positionFrequency: 0.1
   _rotationFrequency: 0.1
-  _positionAmplitude: 0.1
+  _positionAmplitude: 0.05
   _rotationAmplitude: 0.1
   _positionScale: {x: 1, y: 1, z: 1}
   _rotationScale: {x: 1, y: 1, z: 0}
@@ -13268,6 +14127,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 63.378727
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
@@ -13653,6 +14527,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 100.000015
       objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
 --- !u!4 &1242437707 stripped
@@ -13831,6 +14720,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 63.378708
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
@@ -14043,6 +14947,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 63.378708
       objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
 --- !u!4 &1281114758 stripped
@@ -14208,6 +15127,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 63.378708
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
@@ -14380,6 +15314,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 100.000015
       objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
 --- !u!4 &1357895264 stripped
@@ -14540,6 +15489,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 63.378708
       objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
 --- !u!4 &1373848891 stripped
@@ -14636,6 +15600,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 63.378716
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
@@ -14784,6 +15763,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 63.378708
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
@@ -15152,6 +16146,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 63.378708
       objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
 --- !u!4 &1465215812 stripped
@@ -15306,6 +16315,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 63.378708
       objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
 --- !u!4 &1480275075 stripped
@@ -15391,6 +16415,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 63.378708
       objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
 --- !u!4 &1485108598 stripped
@@ -15475,6 +16514,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 63.378708
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
@@ -15778,6 +16832,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 99.999985
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
@@ -16169,6 +17238,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 100.000015
       objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
 --- !u!4 &1649930169 stripped
@@ -16264,6 +17348,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 100.000015
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
@@ -16361,6 +17460,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 100.000015
       objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
 --- !u!4 &1674306387 stripped
@@ -16445,6 +17559,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 63.378708
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
@@ -16605,6 +17734,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 100.000015
       objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
 --- !u!4 &1690986328 stripped
@@ -16689,6 +17833,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 63.378708
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
@@ -16883,6 +18042,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 100.000015
       objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
 --- !u!4 &1708721195 stripped
@@ -16967,6 +18141,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 63.378708
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
@@ -17053,6 +18242,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 63.378708
       objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
 --- !u!4 &1735537082 stripped
@@ -17137,6 +18341,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 63.378708
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
@@ -17228,6 +18447,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 63.37872
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
@@ -17439,6 +18673,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 63.378708
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
@@ -17695,6 +18944,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 63.378708
       objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
 --- !u!4 &1933848133 stripped
@@ -17917,6 +19181,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 100.00003
       objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
 --- !u!4 &1955448785 stripped
@@ -18002,6 +19281,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 63.378708
       objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
 --- !u!4 &1956160432 stripped
@@ -18055,30 +19349,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   logInputLevel: 0
-  waveSpeed: 9
+  takeScreenshot: 13
+  screenshotSuperSize: 2
+  waveSpeed: 20
   wavelength: 0.15
-  maxEmissionRingValue: 2.15
+  maxEmissionRingValue: 3.4
   _soundRingParent: {fileID: 1036965638}
   _mainCamera: {fileID: 1139698841}
   _audioMngr: {fileID: 550951193}
+  _minEmissionRate: 3
+  _rateOverTimeMultiplier: 1000
   _launchCameraPanning: 32
   _timelineMngr: {fileID: 848163281}
   _finalEmbersPS: {fileID: 11635042}
   _finalEmberEmiterMultiplier: 500
   colors:
-  - {r: 1, g: 0.75744575, b: 0.29019606, a: 1}
-  - {r: 0.9433962, g: 0.7037968, b: 0.24474904, a: 1}
-  - {r: 0.92156863, g: 0.6509804, b: 0.3254902, a: 1}
-  - {r: 0.9056604, g: 0.5592108, b: 0.4229263, a: 1}
-  - {r: 1, g: 0.5176471, b: 0.5019608, a: 1}
-  - {r: 0.9098039, g: 0.4078432, b: 0.5038651, a: 1}
-  - {r: 1, g: 0.33490568, b: 0.39219764, a: 1}
-  - {r: 0.5950799, g: 0.43734425, b: 0.7924528, a: 1}
-  - {r: 0.5983533, g: 0.45098042, b: 1, a: 1}
-  - {r: 0.4677596, g: 0.3517711, b: 0.8773585, a: 1}
-  - {r: 0.45098042, g: 0.4872581, b: 1, a: 1}
-  - {r: 0.4509804, g: 0.62352943, b: 1, a: 1}
-  result: {r: 1, g: 0, b: 0.47424698, a: 1}
+  - {r: 0.15686275, g: 1, b: 0, a: 1}
+  - {r: 0, g: 1, b: 0.9098039, a: 1}
+  - {r: 0, g: 0.4862745, b: 1, a: 1}
+  - {r: 0.019607844, g: 0.22352941, b: 0.9882353, a: 1}
+  - {r: 0.044693217, g: 0.07058824, b: 0.91764706, a: 1}
+  - {r: 0.34117648, g: 0, b: 0.61960787, a: 1}
+  - {r: 0.45490196, g: 0, b: 0.2784314, a: 1}
+  - {r: 0.627451, g: 0, b: 0, a: 1}
+  - {r: 0.7490196, g: 0.16078432, b: 0, a: 1}
+  - {r: 1, g: 0.3882353, b: 0, a: 1}
+  - {r: 1, g: 0.9254902, b: 0, a: 1}
+  - {r: 0.32156864, g: 1, b: 0, a: 1}
 --- !u!114 &1957013965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18174,6 +19471,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 100.000015
       objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
 --- !u!4 &2006684090 stripped
@@ -18214,7 +19526,7 @@ Transform:
   - {fileID: 550951191}
   - {fileID: 1071874448}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2014328437
 PrefabInstance:
@@ -18297,6 +19609,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 100.000015
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
@@ -18558,6 +19885,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 100.000015
       objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
 --- !u!4 &2028516800 stripped
@@ -18802,6 +20144,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 99.999985
       objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
 --- !u!4 &2066764866 stripped
@@ -18886,6 +20243,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 63.378708
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
@@ -18976,6 +20348,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 100.000015
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: minEmissionRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: rateOverTimeMultiplier
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150573072172473308, guid: 9670e6e0eb92ae44ba738b1e00e40b9e,
+        type: 3}
+      propertyPath: _matEmissiveValue
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9670e6e0eb92ae44ba738b1e00e40b9e, type: 3}
@@ -19359,7 +20746,7 @@ PrefabInstance:
     - target: {fileID: 5974612392013729291, guid: 8eafb4c0cb8e1da49adef02f7cf430a8,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5974612392013729291, guid: 8eafb4c0cb8e1da49adef02f7cf430a8,
         type: 3}
@@ -19379,17 +20766,17 @@ PrefabInstance:
     - target: {fileID: 5974612391206439637, guid: 8eafb4c0cb8e1da49adef02f7cf430a8,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.53442603
+      value: 0.5286084
       objectReference: {fileID: 0}
     - target: {fileID: 5974612391206439637, guid: 8eafb4c0cb8e1da49adef02f7cf430a8,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.84521526
+      value: 0.84886587
       objectReference: {fileID: 0}
     - target: {fileID: 5974612391206439637, guid: 8eafb4c0cb8e1da49adef02f7cf430a8,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.44
+      value: -4.11
       objectReference: {fileID: 0}
     - target: {fileID: 5974612391206439637, guid: 8eafb4c0cb8e1da49adef02f7cf430a8,
         type: 3}
@@ -19399,7 +20786,7 @@ PrefabInstance:
     - target: {fileID: 5974612391206439637, guid: 8eafb4c0cb8e1da49adef02f7cf430a8,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.81
+      value: -3.18
       objectReference: {fileID: 0}
     - target: {fileID: 5974612391206439637, guid: 8eafb4c0cb8e1da49adef02f7cf430a8,
         type: 3}

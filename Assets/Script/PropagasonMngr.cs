@@ -5,19 +5,26 @@ using UnityEngine;
 public class PropagasonMngr : MonoBehaviour
 {
     public bool logInputLevel;
+    public KeyCode takeScreenshot;
+    public int screenshotSuperSize = 2;
 
     [Header("Wave Settings")]
     public float waveSpeed;
     [Range(0.1f, 1.0f)]
     public float wavelength;
-    [Range(0.0f, 5.0f)]
+    [Range(0.0f, 20.0f)]
     public float maxEmissionRingValue;
+    public float MaxEmissionRingValue { get => maxEmissionRingValue; set => maxEmissionRingValue = value; }
 
     [Header("External Links")]
     [SerializeField] private GameObject _soundRingParent;
     [SerializeField] private MainCameraMngr _mainCamera;
     [SerializeField] private AudioMngr _audioMngr;
     private SoundRingBe[] _soundRingArray;
+
+    [Header("Ring Parameters")]
+    [SerializeField] private float _minEmissionRate;
+    [SerializeField] private int _rateOverTimeMultiplier = 2000;
 
 
     [Header("Camera movement")]
@@ -31,8 +38,8 @@ public class PropagasonMngr : MonoBehaviour
     [SerializeField] float _finalEmberEmiterMultiplier;
 
     [Header("Color Range")]
+    [ColorUsageAttribute(false, true)]
     public Color[] colors;
-    public Color result;
 
     private void Awake()
     {
@@ -40,6 +47,8 @@ public class PropagasonMngr : MonoBehaviour
         _finalEmbersEmission = _finalEmbersPS.emission;
         _finalEmbersEmission.rateOverTime = 0.0f;
         _finalEmbersMainModule = _finalEmbersPS.main;
+
+        LoadPlayerPrefs();
     }
 
     // Update is called once per frame
@@ -50,24 +59,45 @@ public class PropagasonMngr : MonoBehaviour
         {
             _timelineMngr.PlayCameraPanning();
         }
+        else if(Input.GetKeyUp(takeScreenshot))
+        {
+            ScreenCapture.CaptureScreenshot("Recordings/Propagason_"+ System.DateTime.Now.Day + System.DateTime.Now.Month + System.DateTime.Now.Hour + System.DateTime.Now.Minute + System.DateTime.Now.Second + ".png", screenshotSuperSize);
+        }
+
+        foreach (SoundRingBe soundRing in _soundRingArray)
+        {
+            soundRing.SetupRing(_minEmissionRate, _rateOverTimeMultiplier);
+        }
 
         LaunchContinuouseWave(_audioMngr.Volume, ComputeNoteColor());
 
-        // Send RMS value to camera for camera movement.
-        //_mainCamera.AnimateCamera(inputLevel);
+        if(logInputLevel)
+        {
+            Debug.Log("Input volume : " + _audioMngr.Volume);
+        }
     }
 
 
     public void LaunchContinuouseWave(float waveEnergy, Color waveColor)
     {
         int sequencer = 0;
+
+        // Ensure an energy value between 0 and 1
+        waveEnergy = Mathf.Clamp(waveEnergy, 0.0f, 1.0f);
+
+        // Scale enery according to max emission
+        waveEnergy = waveEnergy * maxEmissionRingValue;
+
+        // Loop all ring to propagate the wave at wavespeed.
         foreach (SoundRingBe soundRing in _soundRingArray)
         {
-            StartCoroutine(soundRing.coReceiveEnergy(waveEnergy * maxEmissionRingValue, maxEmissionRingValue, sequencer / waveSpeed));
-            soundRing.UpdateColor(waveColor, sequencer / waveSpeed);
+            StartCoroutine(soundRing.coUpdateRing(waveColor,
+                                                  waveEnergy,
+                                                  sequencer / waveSpeed));
             sequencer++;
         }
 
+        // Burst final embers for particle system cloud
         StartCoroutine(coBurstFinalEmbers(sequencer / waveSpeed, waveEnergy * maxEmissionRingValue, waveColor));
     }
 
@@ -81,5 +111,15 @@ public class PropagasonMngr : MonoBehaviour
     Color ComputeNoteColor()
     {
         return colors[(int)_audioMngr.Note];
+    }
+
+    void OnApplicationQuit()
+    {
+        PlayerPrefs.SetFloat("maxEmissionRingValue", maxEmissionRingValue);
+    }
+
+    private void LoadPlayerPrefs()
+    {
+        maxEmissionRingValue = PlayerPrefs.GetFloat("maxEmissionRingValue");
     }
 }

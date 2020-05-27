@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09ccbcdf35b95c840b2ea2a59ef10ca1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  matEmissiveValue: 0
-  minEmissionRate: 10
-  rateOverTimeMultiplier: 4000
+  _matEmissiveValue: 0
+  _minEmissionRate: 0
+  _rateOverTimeMultiplier: 2000
 --- !u!1 &5548493646026697211
 GameObject:
   m_ObjectHideFlags: 0
@@ -1278,7 +1278,7 @@ ParticleSystem:
         m_RotationOrder: 4
     separateAxes: 0
   ColorModule:
-    enabled: 1
+    enabled: 0
     gradient:
       serializedVersion: 2
       minMaxState: 1
