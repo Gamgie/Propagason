@@ -10,18 +10,27 @@ public class AudioMngr : MonoBehaviour
     public int Pitch { get => _pitch;
         set
         {
-            _pitch = (int) Mathf.Lerp(_pitch, value, 0.1f);
+            _pitch = value;
             Note = (NoteType)(_pitch%12);
         }
     }
     public float Frequency { get => _frequency; set => _frequency = value; }
     public NoteType Note { get => _note; set => _note = value; }
-    public float Volume {
+    public float Volume
+    {
         get
         {
-            return Remap(_volume,volumeThreshold,1,0,1);
+            return  Remap(_volume, volumeThreshold, 1, 0, 1);
         }
-        set => _volume = value; }
+        set
+        {
+            if (value >= volumeThreshold)
+                _volume = value;
+        }
+    }
+
+    public float VolumeThreshold { get => volumeThreshold; set => volumeThreshold = value; }
+
 
     [SerializeField] private int _pitch;
     [SerializeField] private float _frequency;
@@ -39,6 +48,10 @@ public class AudioMngr : MonoBehaviour
     {
         pitchHistory = new int[pitchHistorySamples];
         pitchHistoryIndex = 0;
+
+        LoadPlayerPref();
+
+        _volume = volumeThreshold;
     }
 
     private void Update()
@@ -72,6 +85,33 @@ public class AudioMngr : MonoBehaviour
 
         return (value - from1) / (to1 - from1) * (to2 - from2) + from2;
 
+    }
+
+    public void PlayAmbiantMusic(int playMusic)
+    {
+        AudioSource audioSource = GetComponent<AudioSource>();
+
+        if(!audioSource.isPlaying && playMusic == 1)
+        {
+            audioSource.Play();
+        }
+        else if(playMusic == 0)
+        {
+            audioSource.Stop();
+
+        }
+        
+    }
+
+    void OnApplicationQuit()
+    {
+        PlayerPrefs.SetFloat("volumeThreshold", volumeThreshold);
+    }
+
+    void LoadPlayerPref()
+    {
+        if (PlayerPrefs.GetFloat("volumeThreshold", -100) != -100)
+            volumeThreshold = PlayerPrefs.GetFloat("volumeThreshold");
     }
 
 }

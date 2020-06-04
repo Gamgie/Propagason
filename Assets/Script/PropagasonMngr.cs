@@ -26,7 +26,6 @@ public class PropagasonMngr : MonoBehaviour
     [SerializeField] private float _minEmissionRate;
     [SerializeField] private int _rateOverTimeMultiplier = 2000;
 
-
     [Header("Camera movement")]
     [SerializeField] KeyCode _launchCameraPanning;
     [SerializeField] TimelineMngr _timelineMngr;
@@ -64,11 +63,6 @@ public class PropagasonMngr : MonoBehaviour
             ScreenCapture.CaptureScreenshot("Recordings/Propagason_"+ System.DateTime.Now.Day + System.DateTime.Now.Month + System.DateTime.Now.Hour + System.DateTime.Now.Minute + System.DateTime.Now.Second + ".png", screenshotSuperSize);
         }
 
-        foreach (SoundRingBe soundRing in _soundRingArray)
-        {
-            soundRing.SetupRing(_minEmissionRate, _rateOverTimeMultiplier);
-        }
-
         LaunchContinuouseWave(_audioMngr.Volume, ComputeNoteColor());
 
         if(logInputLevel)
@@ -91,6 +85,8 @@ public class PropagasonMngr : MonoBehaviour
         // Loop all ring to propagate the wave at wavespeed.
         foreach (SoundRingBe soundRing in _soundRingArray)
         {
+            soundRing.SetupRing(_minEmissionRate, _rateOverTimeMultiplier);
+
             StartCoroutine(soundRing.coUpdateRing(waveColor,
                                                   waveEnergy,
                                                   sequencer / waveSpeed));
@@ -120,6 +116,7 @@ public class PropagasonMngr : MonoBehaviour
 
     private void LoadPlayerPrefs()
     {
-        maxEmissionRingValue = PlayerPrefs.GetFloat("maxEmissionRingValue");
+        if(PlayerPrefs.GetFloat("maxEmissionRingValue", -100) != -100)
+            maxEmissionRingValue = PlayerPrefs.GetFloat("maxEmissionRingValue",-100);
     }
 }

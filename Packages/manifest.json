@@ -1,5 +1,13 @@
 {
+  "scopedRegistries": [
+    {
+	  "name": "Keijiro",
+      "url": "https://registry.npmjs.com",
+      "scopes": [ "jp.keijiro" ]
+    }
+  ],
   "dependencies": {
+  	"jp.keijiro.osc-jack": "1.0.1",
     "com.unity.ads": "2.0.8",
     "com.unity.analytics": "3.3.2",
     "com.unity.cinemachine": "2.3.4",
