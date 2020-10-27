@@ -39,6 +39,7 @@ public class PropagasonMngr : MonoBehaviour
     [Header("Color Range")]
     [ColorUsageAttribute(false, true)]
     public Color[] colors;
+    private Color lastColor;
 
     private void Awake()
     {
@@ -48,6 +49,8 @@ public class PropagasonMngr : MonoBehaviour
         _finalEmbersMainModule = _finalEmbersPS.main;
 
         LoadPlayerPrefs();
+
+        lastColor = colors[0];
     }
 
     // Update is called once per frame
@@ -63,9 +66,12 @@ public class PropagasonMngr : MonoBehaviour
             ScreenCapture.CaptureScreenshot("Recordings/Propagason_"+ System.DateTime.Now.Day + System.DateTime.Now.Month + System.DateTime.Now.Hour + System.DateTime.Now.Minute + System.DateTime.Now.Second + ".png", screenshotSuperSize);
         }
 
-        LaunchContinuouseWave(_audioMngr.Volume, ComputeNoteColor());
+        Color lerpColor = Color.Lerp(lastColor, ComputeNoteColor(), 0.2f);
 
-        if(logInputLevel)
+        LaunchContinuouseWave(_audioMngr.Volume, lerpColor);
+        lastColor = lerpColor;
+
+        if (logInputLevel)
         {
             Debug.Log("Input volume : " + _audioMngr.Volume);
         }
