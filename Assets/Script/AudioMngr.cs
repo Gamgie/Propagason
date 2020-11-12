@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class AudioMngr : MonoBehaviour
 {
@@ -20,16 +21,14 @@ public class AudioMngr : MonoBehaviour
     {
         get
         {
-            return  Remap(_volume, volumeThreshold, 1, 0, 1);
+            return  _volume;
         }
         set
         {
-            if (value >= volumeThreshold)
-                _volume = value;
+            _volume = value;
         }
     }
 
-    public float VolumeThreshold { get => volumeThreshold; set => volumeThreshold = value; }
 
 
     [SerializeField] private int _pitch;
@@ -38,7 +37,6 @@ public class AudioMngr : MonoBehaviour
     [Range(0.0f, 1.0f)]
     [SerializeField] private float _volume;
 
-    public float volumeThreshold = 0.1f;
     int[] pitchHistory;
     int pitchHistoryIndex;
     int pitchHistorySamples = 64;
@@ -50,8 +48,6 @@ public class AudioMngr : MonoBehaviour
         pitchHistoryIndex = 0;
 
         LoadPlayerPref();
-
-        _volume = volumeThreshold;
     }
 
     private void Update()
@@ -91,7 +87,7 @@ public class AudioMngr : MonoBehaviour
     {
         AudioSource audioSource = GetComponent<AudioSource>();
 
-        if(!audioSource.isPlaying && playMusic == 1)
+        if (!audioSource.isPlaying && playMusic == 1)
         {
             audioSource.Play();
         }
@@ -105,13 +101,15 @@ public class AudioMngr : MonoBehaviour
 
     void OnApplicationQuit()
     {
-        PlayerPrefs.SetFloat("volumeThreshold", volumeThreshold);
+        AudioSource audioSource = GetComponent<AudioSource>();
+
+        PlayerPrefs.SetInt("PlayMusic", Convert.ToInt32(audioSource.isPlaying));
     }
 
     void LoadPlayerPref()
     {
-        if (PlayerPrefs.GetFloat("volumeThreshold", -100) != -100)
-            volumeThreshold = PlayerPrefs.GetFloat("volumeThreshold");
+        if (PlayerPrefs.GetInt("PlayMusic", -100) != -100)
+            PlayAmbiantMusic(PlayerPrefs.GetInt("PlayMusic"));
     }
 
 }
