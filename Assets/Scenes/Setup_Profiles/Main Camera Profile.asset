@@ -18,13 +18,13 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 0
+    value: 2.73
   threshold:
     overrideState: 1
-    value: 1
+    value: 0.74
   softKnee:
     overrideState: 1
-    value: 0.5
+    value: 0.339
   clamp:
     overrideState: 1
     value: 65472
@@ -172,7 +172,7 @@ MonoBehaviour:
   active: 1
   enabled:
     overrideState: 1
-    value: 1
+    value: 0
   gradingMode:
     overrideState: 1
     value: 1
